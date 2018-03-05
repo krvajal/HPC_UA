@@ -1,0 +1,12 @@
+# Examples for array jobs via Torque and Worker
+#
+# Launch the Torque array job:
+# qsub -t 1-100 job_array.pbs
+#
+# Launch the worker array job:
+# wsub -t 1-100 -batch test_set.pbs
+#
+# Note the difference in the resource specifications:
+# - Torque array job: Resources for a single job of the array
+# - Worker: Resources for the overall worker process, so all array jobs
+#   together.
